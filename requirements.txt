@@ -1,5 +1,6 @@
 streamlit>=1.28
 langchain>=0.0.217
+langchain-community
 openai>=1.2
 tiktoken
 langchain_openai
