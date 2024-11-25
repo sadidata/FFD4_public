@@ -86,10 +86,10 @@ map_chain = LLMChain(llm=llm, prompt=map_prompt)
 
 # Prompt pour l'étape Reduce (résumé global)
 reduce_template = """
-The following is a set of summaries:
+Voici un ensemble de résumés :
 {docs}
-Take these and distill it into a final, consolidated summary
-of the main themes.
+Prenez ces résumés et distillez-les en un résumé final consolidé 
+des principaux thèmes abordés. Le résumé final doit être en Français.
 """
 reduce_prompt = ChatPromptTemplate([("human", reduce_template)])
 reduce_chain = LLMChain(llm=llm, prompt=reduce_prompt)
