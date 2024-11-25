@@ -65,7 +65,7 @@ if "All" not in selected_groupe:
 # Filtrer par entité
 if "All" not in selected_entities:
     bpd = bpd[bpd["Entity"].isin(selected_entities)]
-    bpd_analytics = bpd_analytics[bpd_analytics["Entity"].isin(selected_groupe)]
+    bpd_analytics = bpd_analytics[bpd_analytics["Entity"].isin(selected_entities)]
 
 # Filtrer par entité
 if "All" not in selected_bpd:
