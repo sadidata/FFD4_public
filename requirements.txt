@@ -6,7 +6,7 @@ tiktoken
 langchain_openai
 langgraph
 matplotlib
-networkx 
+networkx
 plotly
 xlsxwriter
-faiss-gpu
+faiss-cpu
