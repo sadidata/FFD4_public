@@ -91,8 +91,8 @@ st.markdown(
     - Identifier les recommandations clés pour renforcer l'impact des BPD dans le financement du développement.
     - Fournir une vue globale des suggestions de financement durable et innovant.
 
-    ##### 4️⃣ Actions d'Addis-Abeba  
-    Cet onglet est dédié à l’analyse des **Actions prioritaires de l’Agenda d’Addis-Abeba** :  
+    ##### 4️⃣ Actions d'Addis-Ababa  
+    Cet onglet est dédié à l’analyse des **Actions prioritaires de l’Agenda d’Addis-ababa** :  
     - Étudier les contributions selon les **sept domaines d’action clés** (ressources publiques, commerce, dette, etc.).  
     - Fournir une vue d’ensemble des engagements et propositions pour le financement du développement.  
 
