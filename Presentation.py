@@ -1,6 +1,57 @@
+import hmac
 import streamlit as st
 
-st.set_page_config(layout="wide")
+# Simuler des secrets (normalement, ils sont stockés dans `st.secrets`)
+USER_CREDENTIALS = {
+    "AFD": {"password": "AFD_FFD4"},
+}
+
+st.set_page_config(
+   layout="wide"
+)
+# Fonction pour vérifier l'authentification
+def check_credentials():
+    """Vérifie le nom d'utilisateur, le mot de passe et la clé API."""
+
+    def credentials_entered():
+        """Valide les identifiants entrés par l'utilisateur."""
+        username = st.session_state.get("username", "")
+        password = st.session_state.get("password", "")
+
+        if username in USER_CREDENTIALS:
+            user_data = USER_CREDENTIALS[username]
+            if (
+                hmac.compare_digest(password, user_data["password"])
+            ):
+                # Authentification réussie
+                st.session_state["authenticated"] = True
+                # Supprimer les informations sensibles des entrées
+                del st.session_state["username"]
+                del st.session_state["password"]
+                return
+        # Si les identifiants sont incorrects
+        st.session_state["authenticated"] = False
+
+    # Si l'utilisateur est déjà authentifié, retourner True
+    if st.session_state.get("authenticated", False):
+        return True
+
+    # Interface d'entrée pour les identifiants
+    st.title("🔐 Authentification requise")
+    st.text_input("Nom d'utilisateur", key="username")
+    st.text_input("Mot de passe", type="password", key="password")
+    st.button("Se connecter", on_click=credentials_entered)
+
+    # Message d'erreur si les identifiants sont incorrects
+    if "authenticated" in st.session_state and not st.session_state["authenticated"]:
+        st.error("😕 Nom d'utilisateur, mot de passe")
+    return False
+
+# Appel de la fonction pour gérer l'authentification
+if not check_credentials():
+    st.stop()  # Bloque l'exécution si l'utilisateur n'est pas authentifié
+
+  
 # --- Contenu de la Présentation ---
 st.title("🌍 Analyse des Contributions FFD4")  # Titre principal
 
@@ -39,6 +90,12 @@ st.markdown(
     - Analyser les contributions mentionnant les BPD et leurs propositions spécifiques.
     - Identifier les recommandations clés pour renforcer l'impact des BPD dans le financement du développement.
     - Fournir une vue globale des suggestions de financement durable et innovant.
+
+    ##### 4️⃣ Actions d'Addis-Abeba  
+    Cet onglet est dédié à l’analyse des **Actions prioritaires de l’Agenda d’Addis-Abeba** :  
+    - Étudier les contributions selon les **sept domaines d’action clés** (ressources publiques, commerce, dette, etc.).  
+    - Fournir une vue d’ensemble des engagements et propositions pour le financement du développement.  
+
     """
 )
 
@@ -51,4 +108,4 @@ st.markdown(
     
     **Contact :** [Abdulaziz Sadi-Cherif](mailto:sadi-cherifa.ext@afd.fr)
     """
-)
+  )
