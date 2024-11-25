@@ -3,7 +3,7 @@ import streamlit as st
 
 # Simuler des secrets (normalement, ils sont stockés dans `st.secrets`)
 USER_CREDENTIALS = {
-    "AFD": {"password": "AFD_FFD4"},
+    st.secrets["username"]: {"password": st.secret["password"]},
 }
 
 st.set_page_config(
