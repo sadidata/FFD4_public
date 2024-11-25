@@ -6,8 +6,12 @@ USER_CREDENTIALS = {
     st.secrets["username"]: {"password": st.secrets["password"]},
 }
 
+
+# Configurer la page avec un titre, un emoji, et des éléments de menu
 st.set_page_config(
-   layout="wide"
+    page_title="FFD4",
+    page_icon="🌍",
+    layout="wide",  # Options: 'centered' ou 'wide'
 )
 # Fonction pour vérifier l'authentification
 def check_credentials():
