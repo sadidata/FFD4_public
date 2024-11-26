@@ -358,37 +358,37 @@ with tab2:
 with tab3:
     st.subheader("Données brutes")
     st.markdown(
-## 📋 Méthodologie de génération des données pour les ODD
-
-Les données présentées dans cet onglet ont été générées en utilisant un **modèle de langage avancé** pour analyser les contributions en fonction des **Objectifs de Développement Durable (ODD)**. Voici comment ces données ont été produites :
-
-### 🛠️ Étapes d’analyse des textes
-1. **Analyse des textes entiers** :  
-   Chaque contribution a été entièrement analysée pour détecter des informations relatives aux ODD.
-
-2. **Analyse ciblée pour chaque ODD (1 à 17)** :  
-   Le modèle a été interrogé pour extraire des informations spécifiques à chaque ODD, incluant :  
-   - **Comptage des mentions explicites et implicites** :  
-     Identification des occurrences directes ou sous-entendues de l’ODD dans le texte.  
-   - **Extraits pertinents** :  
-     Extraction des passages contenant des informations importantes sur l’ODD.  
-   - **Évaluation de l'importance** :  
-     Attribution d’un score d’importance pour l’ODD dans le texte (de 1 à 5).  
-   - **Résumé des contributions** :  
-     Génération d’un résumé des actions, recommandations ou propositions liées à l’ODD.  
-
-3. **Résultat structuré** :  
-   Les résultats de chaque ODD ont été organisés sous forme de tableau contenant :  
-   - **Nombre de mentions** (`mention_count`).  
-   - **Exemples de passages pertinents** (`examples`).  
-   - **Score d'importance** (`importance_score`).  
-   - **Résumé des contributions** (`summary`).  
-
-4. **Compilation des résultats globaux** :  
-   Ces résultats ont ensuite été centralisés dans un tableau global pour permettre des analyses approfondies et comparatives.
-
-### 🚀 Résultats
-Les tableaux affichés ci-dessous offrent un aperçu des analyses effectuées, regroupant les données par ODD pour chaque contribution.
+        ## 📋 Méthodologie de génération des données pour les ODD
+        
+        Les données présentées dans cet onglet ont été générées en utilisant un **modèle de langage avancé** pour analyser les contributions en fonction des **Objectifs de Développement Durable (ODD)**. Voici comment ces données ont été produites :
+        
+        ### 🛠️ Étapes d’analyse des textes
+        1. **Analyse des textes entiers** :  
+           Chaque contribution a été entièrement analysée pour détecter des informations relatives aux ODD.
+        
+        2. **Analyse ciblée pour chaque ODD (1 à 17)** :  
+           Le modèle a été interrogé pour extraire des informations spécifiques à chaque ODD, incluant :  
+           - **Comptage des mentions explicites et implicites** :  
+             Identification des occurrences directes ou sous-entendues de l’ODD dans le texte.  
+           - **Extraits pertinents** :  
+             Extraction des passages contenant des informations importantes sur l’ODD.  
+           - **Évaluation de l'importance** :  
+             Attribution d’un score d’importance pour l’ODD dans le texte (de 1 à 5).  
+           - **Résumé des contributions** :  
+             Génération d’un résumé des actions, recommandations ou propositions liées à l’ODD.  
+        
+        3. **Résultat structuré** :  
+           Les résultats de chaque ODD ont été organisés sous forme de tableau contenant :  
+           - **Nombre de mentions** (`mention_count`).  
+           - **Exemples de passages pertinents** (`examples`).  
+           - **Score d'importance** (`importance_score`).  
+           - **Résumé des contributions** (`summary`).  
+        
+        4. **Compilation des résultats globaux** :  
+           Ces résultats ont ensuite été centralisés dans un tableau global pour permettre des analyses approfondies et comparatives.
+        
+        ### 🚀 Résultats
+        Les tableaux affichés ci-dessous offrent un aperçu des analyses effectuées, regroupant les données par ODD pour chaque contribution.
 
     )
     
