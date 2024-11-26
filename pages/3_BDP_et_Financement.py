@@ -235,8 +235,47 @@ with tab2:
 
 with tab3:
     st.subheader("Données brutes")
-    
+
+    st.markdown(
+        """
+        ## 📋 Méthodologie de génération des données pour les Banques Publiques de Développement (BPD)
+        
+        Les données présentées dans cet onglet ont été générées en analysant les contributions pour identifier les mentions et rôles des **Banques Publiques de Développement (BPD)**. Voici les étapes du processus d’analyse :
+        
+        ### 🛠️ Étapes d’analyse des textes
+        1. **Analyse des textes entiers** :  
+           Les contributions ont été entièrement envoyées à un modèle de langage pour identifier les informations pertinentes sur les BPD.
+        
+        2. **Analyse ciblée pour les BPD** :  
+           Pour chaque texte, les actions suivantes ont été effectuées :  
+           - **Comptage des mentions explicites et implicites** :  
+             Détection du nombre de fois où les BPD sont mentionnées directement ou indirectement.  
+           - **Identification des noms spécifiques des BPD** :  
+             Extraction des noms de BPD mentionnées, comme la **Banque Mondiale**, l’**AFD**, ou encore l’**IMF**.  
+           - **Résumé des rôles des BPD** :  
+             Génération d’un résumé global expliquant les rôles attribués aux BPD dans le financement du développement.  
+           - **Exemples pertinents** :  
+             Extraction de phrases clés où les BPD sont mentionnées ou jouent un rôle déterminant.  
+           - **Évaluation de l’importance des BPD** :  
+             Attribution d’un score d’importance pour chaque texte (de 1 à 5).  
+        
+        3. **Résultat structuré** :  
+           Les résultats ont été regroupés dans un tableau contenant :  
+           - **Nombre de mentions explicites et implicites** (`explicit_mentions`, `implicit_mentions`).  
+           - **Liste des noms des BPD mentionnées** (`bpd_names`).  
+           - **Résumé des rôles des BPD** (`role_summary`).  
+           - **Exemples pertinents** (`examples`).  
+           - **Score d’importance** (`importance_score`).  
+        
+        4. **Compilation des résultats globaux** :  
+           Les informations pour toutes les contributions ont été centralisées dans un tableau pour faciliter les analyses et visualisations.
+        
+        ### 🚀 Résultats
+        Les tableaux affichés ci-dessous offrent une vue détaillée des analyses, permettant d’explorer les rôles des BPD dans les contributions et de mieux comprendre leur impact dans le financement du développement.
+
+        """
+    )
     # Préparation des données brutes pour l'affichage et le téléchargement
     bpd.reset_index(drop=True, inplace=True)
 
-    st.table(bpd)
+    st.table(bpd.head(10))
