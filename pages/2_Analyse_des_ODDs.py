@@ -358,6 +358,7 @@ with tab2:
 with tab3:
     st.subheader("Données brutes")
     st.markdown(
+        """
         ## 📋 Méthodologie de génération des données pour les ODD
         
         Les données présentées dans cet onglet ont été générées en utilisant un **modèle de langage avancé** pour analyser les contributions en fonction des **Objectifs de Développement Durable (ODD)**. Voici comment ces données ont été produites :
@@ -389,7 +390,7 @@ with tab3:
         
         ### 🚀 Résultats
         Les tableaux affichés ci-dessous offrent un aperçu des analyses effectuées, regroupant les données par ODD pour chaque contribution.
-
+        """
     )
     
     # Préparation des données brutes pour l'affichage et le téléchargement
