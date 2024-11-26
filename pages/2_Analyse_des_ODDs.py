@@ -399,4 +399,4 @@ with tab3:
     odd["ODD number"] = odd["ODD number"].astype(int)
     
 
-    st.table(odd.head(10)
+    st.table(odd.head(10))
