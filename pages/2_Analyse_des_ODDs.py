@@ -357,7 +357,7 @@ with tab2:
 
 with tab3:
     st.subheader("Données brutes")
-
+    st.markdown(
     ## 📋 Méthodologie de génération des données
 
     Les données affichées dans cet onglet ont été générées en utilisant un **modèle de langage avancé** pour analyser les contributions en fonction des **Objectifs de Développement Durable (ODD)**. Voici les étapes principales du processus :
@@ -394,7 +394,7 @@ with tab3:
     Le tableau ci-dessous présente un aperçu des données générées. Chaque ligne correspond à une analyse d’un ODD spécifique dans un document donné, avec les informations clés (mentions, exemples, importance, résumé).
     
     ---
-
+    )
     
     # Préparation des données brutes pour l'affichage et le téléchargement
     odd.reset_index(drop=True, inplace=True)
