@@ -354,7 +354,41 @@ with tab2:
 
 with tab3:
     st.subheader("Données brutes")
-    
+
+    st.markdown(
+        """
+        ### Génération des Données pour les Action Areas de l'Agenda d'Addis-Abeba
+        
+        Les données liées aux **sept Action Areas** de l'Agenda d'Addis-Abeba ont été générées grâce à l'analyse automatisée des textes fournis, en utilisant des modèles d'intelligence artificielle avancés.
+        
+        #### Contexte
+        L'Agenda d'Addis-Abeba constitue un cadre global visant à aligner les flux de financement et les politiques avec des priorités économiques, sociales et environnementales. Il est structuré autour de sept domaines d'action, ou **Action Areas**, qui couvrent les principales dimensions du financement pour le développement :
+        1. Ressources publiques nationales.
+        2. Entreprises privées nationales et internationales.
+        3. Coopération internationale pour le développement.
+        4. Commerce international comme moteur du développement.
+        5. Dette et viabilité de la dette.
+        6. Résolution des problèmes systémiques.
+        7. Science, technologie, innovation et renforcement des capacités.
+        
+        #### Méthodologie
+        Pour chaque Action Area, l'analyse s'est concentrée sur :
+        - **L’identification des mentions** dans les contributions : Chaque texte a été examiné pour repérer les occurrences explicites et implicites de l'Action Area correspondante.
+        - **L’extraction de passages clés** : Les parties du texte contenant des informations pertinentes sur l'Action Area ont été isolées.
+        - **La synthèse des recommandations** : Les propositions, actions ou politiques suggérées dans le texte ont été regroupées en un résumé clair et concis.
+        
+        #### Résultat
+        Pour chaque contribution analysée, un ensemble de données structuré a été généré, comprenant :
+        - Le nombre d’occurrences identifiées pour chaque Action Area.
+        - Des exemples spécifiques tirés des contributions.
+        - Un résumé des idées principales, propositions ou recommandations.
+        
+        #### Objectif
+        Ce processus vise à offrir une vision structurée et exploitable des contributions des acteurs. En mettant en avant les recommandations et actions pertinentes pour chaque Action Area, cette analyse facilite la compréhension des priorités émergentes et soutient les discussions stratégiques autour du financement pour le développement.
+        
+        💡 **Remarque** : Cette analyse est réalisée automatiquement à partir des textes fournis, ce qui garantit une grande efficacité tout en maintenant une précision élevée.
+        """
+    )
     # Préparation des données brutes pour l'affichage et le téléchargement
     actions.reset_index(drop=True, inplace=True)
 
