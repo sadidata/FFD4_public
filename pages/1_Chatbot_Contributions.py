@@ -165,10 +165,21 @@ app = workflow.compile(checkpointer=memory)
 
 # === Streamlit UI ===
 st.title("🔎 Discute avec les Contributions")
-st.caption(
-    "💡 Ce chatbot se souvient du contexte de vos questions précédentes pour fournir des réponses plus précises et pertinentes. "
-    "Pour accéder aux sources utilisées dans les réponses, appuie sur la section '🔍 Sources' située sous chaque réponse."
-)
+
+# Bulle d'information pour expliquer le fonctionnement
+with st.expander("ℹ️ Comment ça marche ?", expanded=False):
+    st.write(
+        """
+        Ce chatbot utilise une méthode avancée d'analyse des contributions :  
+        
+        - Les documents sont découpés par page, ce qui permet une granularité précise dans l'analyse.  
+        - Lorsque vous posez une question, le système identifie les pages les plus pertinentes en utilisant une comparaison sémantique et contextuelle avec votre question.  
+        - Une fois les pages les plus pertinentes identifiées, elles sont envoyées à un modèle de langage avancé qui génère une réponse complète et précise en fonction du contenu extrait.  
+
+        **Astuce :** 💡 Ce chatbot se souvient du contexte de vos questions précédentes pour fournir des réponses plus précises et pertinentes.
+        Pour accéder aux sources utilisées dans les réponses, appuie sur la section '🔍 Sources' située sous chaque réponse.
+        """
+    )
 
 
 # Handle chat history and responses
